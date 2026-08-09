@@ -1,0 +1,33 @@
+/* Custom CSS - Isolated tab styling and animations */
+
+.tab-btn {
+    color: #94a3b8; /* Tailwind slate-400 */
+    background-color: transparent;
+}
+
+.tab-btn:hover {
+    color: #f8fafc; /* Tailwind slate-50 */
+}
+
+.tab-btn.active-tab {
+    color: #ffffff;
+    background-color: #0f172a; /* Tailwind slate-900 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #1e293b; /* Tailwind slate-800 */
+}
+
+/* Subtle fade animation when switching tabs */
+.tab-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
